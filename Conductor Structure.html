@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+    <title>Conductor Structure</title>
+	<link rel="icon" href="conductor.jpg">
+  <head>
+    <script src="conductor.js"></script>
+    <style>
+	body {
+	  background: rgba(0,71,171);
+	}
+	
+	/* Styling/Setting up the button tabs next to the logos */
+	.tab {
+	  overflow: hidden;
+	  border: 0px solid #ccc;
+	  background-color: #f1f1f1;
+	  margin-left: 299px;
+	  float: right;
+	  margin-right: 700px;
+	  transition: 0.3s;
+	}
+	
+	/* Styling the buttons inside the tab */
+	.tab button {
+	  background-color: inherit;
+	  float: left;
+	  outline: none;
+	  cursor: pointer;
+	  padding: 14px 16px;
+	  transition: 0.3s;
+	  text-transform: uppercase;
+	}
+	
+	/* Change background color to hover the button tabs */
+	.tab button:hover {
+	  background-color: #ccc;
+	}
+	
+	/* Let the button stay active once you clicked one of the button tabs */
+	.tab button:active {
+	  background-color: slateGrey;
+	}
+	
+	/* Style the tab content area below the button tabs */
+	.tabcontent {
+	  background-color: #bda6a6;
+	  display: none;
+	  padding: 6px 12px;
+	  border: 1px solid #e7ff06;
+	  border-top: none;  /* Sets the top part of the border to be connected to the top of the browser page */
+	}
+	
+	/* Styling and adjusting the search/input box/field */
+	.bottomnav input[type=text] {
+	  padding: 8px;
+	  font-size: 15px;
+	  width: 300px;
+	  height: 30px;
+	}
+	
+	/* The button tag */
+	form button {
+	  background: tomato;
+	  padding: 10px;
+	  height: 90px;
+	  width: 80px;
+	  font-size: 20px; /* Controls the text inside the button */
+	}
+	
+	/* The search icon image */
+	.search-bar button img {
+	  width: 60px;
+	  height: 60px;
+	  cursor: pointer;
+	}
+	
+	/* Setting up the body main page template/grid */
+	html:not(.ve-active) .page-has-right-rail {
+	  display: grid;
+	  grid-template-columns: minmax(0, 1fr) min-content;
+	  grid-template-rows: max-content;
+	}
+	
+	.page {
+	  margin-top: 12px;
+	  position: relative;
+	}
+	
+	/* Designing the main body page */
+	html:not(.ve-active) .page-has-right-rail .page__main {
+	  border-radius: 3px 0 0 3px;
+	}
+	
+	.page .page__main {
+	  height: 100%;
+	}
+	
+	.page__main {
+	  background-color: #fce1c7;
+	  min-height: 480px;
+	  padding: 24px 36px;
+	  position: relative;
+	}
+	
+	/* Creating a sidebar inside the page__main class */
+	.sidebar {
+	  position: absolute;
+	  left: 0;
+	  width: 250px;
+	  height: 100%;
+	  background: #042331;
+	  top: 0px; /* Shifting the sidebar on top */
+	}	
+	
+	/* Creating a unordered list */
+	ul {
+	  list-style-type: none; /* Makes bullet disappear */
+	}
+	
+	/* Make all list items in the unordered list shift */
+	ul li {
+	  margin-left: 40px; /* Shifting the content to the right */
+	}
+	
+	a {
+	  color: red;
+	}
+	
+	a:hover {
+	  color: yellow;
+	}
+	
+	/* Video content code */
+	iframe {
+	  margin-left: 400px; /* Move the video shifted to the right to the center of the main__page content tag */
+	}
+	</style>
+  </head>
+<body>
+<!-- Create a header for the body tag for setting up, the images on top-left of the webpage -->
+<div class="header">
+  <!-- Have a class name for the <img> attribute -->
+  <a class="c-header__conductor">
+    <img src="conductor-logo.png" alt="Conductor logo" height="128px;">
+  </a>
+  <!-- Creating some spaces for the first and second images 
+       to have both be connected in the same row/line 
+       but have some spacing for the logos -->
+  &nbsp;
+  &nbsp;
+    <img src="Inkedconductor-icon-filled(1)new.jpg" alt="Conductor Filled logo" height="128px;">
+	
+	<!-- Creating a new class for the tab -->
+	<div class="tab">
+	<!-- Creating tablinks for the tab -->
+	  <button class="tablinks" onclick="openTask(event, 'Railing')">Railing</button>
+	  <button class="tablinks" onclick="openTask(event, 'Trainer')">Trainer</button>
+	  <button class="tablinks" onclick="openTask(event, 'Settings')">Settings</button>
+	  <button class="tablinks" onclick="openTask(event, 'Options')">Options</button>
+    </div>
+</div>
+
+<!-- the div id represents the class name of the first div class -->
+<div id="Railing" class="tabcontent">
+  <h3>Single Pole Insulated Conductor Rails</h3>
+  <ul>
+    <li>Single pole insulated conductor rails are available for numerous applications and with various numbers of poles.</li>
+  </ul>
+    <h3>Multipole Conductor Rails</h3>
+  <ul>
+    <li>Conductix-Wampfler multipole conductor rails contain several poles in one compact plastic housing. 
+	    They are used for energy and data supply on straight track configurations, for indoor and weather protected outdoor applications.</li>
+  </ul>
+     <h3>Enclosed Conductor Rails</h3>
+  <ul>
+     <li>Conductix-Wampfler enclosed conductor rails contain several poles in one compact box-type plastic housing. 
+	     They are used for energy and data supply on straight and curved track configurations, for indoor and outdoor applications.</li>
+  </ul>	 
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<iframe src="https://giphy.com/embed/3o6vXWjti3IvIpTbbi" width="480" height="360" style="" frameBorder="0" class="giphy-embed" id="conductor" allowFullScreen></iframe><p></p>
+ </div>
+
+<div id="Trainer" class="tabcontent">
+<p>Many large railroads provide on-the-job training for new conductors. 
+   This training may take up to one year to complete, depending on the employer. 
+   Smaller railroads may offer similar training through a community college or training facility.</p>
+<br>
+<p>You do not need to pursue higher education to become a railroad conductor as your employer typically provides all necessary training. 
+   This is a physically demanding job where you may occasionally be asked to lift things weighing 80 pounds or more, so overall fitness is important to your success in this career.</p>
+<br>
+<p>What Training Will I Need For a Train Conductor Job? Training for railroad jobs is often handled through employer programs. 
+   You're eligible for an entry-level position after you've completed high school and have passed a drug test. 
+   You may also consider earning a certificate or associate's degree.</p>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<iframe src="https://giphy.com/embed/3o6vXWjti3IvIpTbbi" width="480" height="360" style="" frameBorder="0" class="giphy-embed" id="conductor" allowFullScreen></iframe><p></p>
+ </div>
+ 
+ <div id="Settings" class="tabcontent">
+   <h3><u>Conductor settings can refer to a variety of things, including:</u></h3>
+   <br>
+   <h3>Conductor for SSR routers</h3>
+   <ol>
+     <li>Log In to the Conductor GUI</li>
+	 <li>Select Configuration</li>
+	 <li>Select Authority and change the name to a unique identifier for your system</li>
+	 <li>Select VALIDATE and then COMMIT</li>
+   </ol>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<iframe src="https://giphy.com/embed/3o6vXWjti3IvIpTbbi" width="480" height="360" style="" frameBorder="0" class="giphy-embed" id="conductor" allowFullScreen></iframe><p></p>
+  </div>
+  
+  <div id="Options" class="tabcontent">
+    <h3><u>When choosing a conductor, you can consider factors such as:</u></h3>
+	<ul>
+	  <li>Temperature: Minimum and maximum temperatures</li>
+	  <li>Voltage: Maximum voltage</li>
+	  <li>Resistance: DC resistance of the insulation and conductor</li>
+	  <li>Size: Size limitations</li>
+	  <li>Strength: Tensile strength</li>
+	  <li>Environment: Working environment</li>
+	</ul>
+	
+	<br>
+	
+	<p>There is a wide range of metals that can be used as a conductor, although Copper (Cu) is by far the most common due to its relative low cost and availability. 
+	   Other common options like aluminium, steel or tinsel wire (mixed strands of copper and cotton) may offer advantages in strength, weight or flex-life.</p>
+	   
+	<br>
+	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<iframe src="https://giphy.com/embed/3o6vXWjti3IvIpTbbi" width="480" height="360" style="" frameBorder="0" class="giphy-embed" id="conductor" allowFullScreen></iframe><p></p>
+	   <!-- Closing off the tabs -->
+	</div>
+	
+	<br>
+	<br>
+	<br>
+	
+	<!-- Creating a new div class -->
+	<div class="bottomnav">	
+	  <!-- Add a search/input box and moving it to the center of the page -->
+	  <!-- Create a form tag in order to create a function to control the search button -->
+	  <form action="" class="search-bar">
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" placeholder="Search.." name="search">  
+	  <button type="submit"><a href="#"><img src="Inkedistockphoto-924437708-612x612.jpg"></a></button>
+	  </form>  
+	</div>
+	
+	<br>
+	<br>
+	
+	<!-- Setting up a new page body element -->
+    <div class="page has-right-rail companion-viewed">
+	
+	  <!-- main class is used for designing the body's main page -->
+	  <main class="page__main" lang="en">
+	  <!-- Spacing the content from the main class tag. Ex... video tag  -->
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  <!-- Embedding YouTube Video into the web browser -->
+	    <iframe src="https://www.youtube.com/embed/VZSALPWIIRY?si=ltkdnBLNnhNCKDnI" style="height: 720px" width="1280" allowfullscreen></iframe>
+	    <!-- Designing a sidebar for page__main class for menu options -->
+		<!-- Left side of the page for body tag -->
+        <div class="sidebar">
+    <ul>
+       &nbsp;<li style="color:Red"><span style="font-size: 23px"><a href="#">Home</a></span></li>
+    <br>
+       &nbsp;<li style="color:Red"><span style="font-size: 23px"><a href="#">Contact</a></span></li>
+    <br>
+       &nbsp;<li style="color:Red"><span style="font-size: 23px"><a href="#">About Me</a></span></li>
+	<br>
+       &nbsp;<li style="color:Red"><span style="font-size: 23px"><a href="#">Info</a></span></li>
+	<br>
+       &nbsp;<li style="color:Red"><span style="font-size: 23px"><a href="#">Pages</a></span></li>
+	<br>
+       &nbsp;<li style="color:Red"><span style="font-size: 23px"><a href="#">Tabs</a></span></li>
+	<br>
+       &nbsp;<li style="color:Red"><span style="font-size: 23px"><a href="#">Video</a></span></li>
+    </ul>	
+</div>
+
+
+	  
+ <!-- The function of the tab content -->
+ <script>
+ function openTask(evt, taskName) {
+   var i, tabcontent, tablinks;
+   tabcontent = document.getElementsByClassName("tabcontent");
+   for (i = 0; i < tabcontent.length; i++) {
+     tabcontent[i].style.display = "none";
+   }
+   tablinks = document.getElementsByClassName("tablinks");
+   for (i = 0; i < tablinks.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" active", "");
+   }
+   document.getElementById(taskName).style.display = "block";
+   evt.currentTarget.className += " active";
+ }
+ </script>
